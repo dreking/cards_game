@@ -40,4 +40,16 @@ defmodule Cards do
       {:error, reason} -> "Somethting went wrong with Error: #{reason}"
     end
   end
+
+  def createHand(handSize) do
+    # deck = Cards.createDeck()
+    # deck = Cards.shuffle(deck)
+    # hand = Cards.deal(deck, handSize)
+
+    # Implement Pipe Operator
+
+    Cards.createDeck()
+    |> Cards.shuffle()
+    |> Cards.deal(handSize)
+  end
 end
