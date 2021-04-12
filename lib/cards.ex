@@ -93,4 +93,17 @@ defmodule Cards do
     # Second approach
     Map.put(map, :a, 2)
   end
+
+  def keywordlist do
+    # Includes tuples
+    # Syntax: {:primary, "red"}
+
+    # First approach
+    colors = [{:primary, "red"}]
+    colors[:primary]
+
+    # Second approach
+    data = [primary: "red", b: 2]
+    data[:primary]
+  end
 end
