@@ -75,4 +75,22 @@ defmodule Cards do
     |> Cards.shuffle()
     |> Cards.deal(handSize)
   end
+
+  def createmaps do
+    colors = %{primary: "red", secondary: "Blue"}
+    colors.primary
+
+    # pattern matching
+    %{secondary: sec} = colors
+    sec
+  end
+
+  def updatemaps do
+    map = %{a: "red", b: 21}
+    # First approach
+    %{map | a: "one"}
+
+    # Second approach
+    Map.put(map, :a, 2)
+  end
 end
